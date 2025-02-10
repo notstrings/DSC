@@ -1,0 +1,54 @@
+﻿# ソフト開発用
+properties:
+  configurationVersion: 0.2.0
+  resources:
+    # DNSアドレス設定※要管理権限
+    # - resource: NetworkingDSC/DnsServerAddress
+    #   id: SetupDNSAddr
+    #   directives:
+    #     description: Setup DNS address
+    #   settings:
+    #     InterfaceAlias : 'イーサネット'
+    #     Address :
+    #       - '192.168.1.1'
+    #       - '8.8.8.8'
+    #     AddressFamily : 'IPv4'
+
+    # #########################################################################
+
+    # ファイルエクスプローラー:拡張子表示
+    - resource: PSDscResources/Registry
+      id: SetHideFileExt
+      directives:
+        description: Set HideFileExt
+      settings:
+        Key: HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced
+        Ensure : Present
+        ValueName : HideFileExt
+        ValueType : DWord
+        ValueData : 0
+        Force : true
+
+    # ファイルエクスプローラー:サムネイルキャッシュ抑止
+    # - resource: PSDscResources/Registry
+    #   id: SetNoThumbnailCache
+    #   directives:
+    #     description: Set NoThumbnailCache
+    #   settings:
+    #     Key: HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced
+    #     Ensure : Present
+    #     ValueName : NoThumbnailCache
+    #     ValueType : DWord
+    #     ValueData : 1
+    #     Force : true
+    # - resource: PSDscResources/Registry
+    #   id: SetDisableThumbnailCache
+    #   directives:
+    #     description: Set DisableThumbnailCache
+    #   settings:
+    #     Key: HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced
+    #     Ensure : Present
+    #     ValueName : DisableThumbnailCache
+    #     ValueType : DWord
+    #     ValueData : 1
+    #     Force : true
