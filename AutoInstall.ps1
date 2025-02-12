@@ -13,8 +13,8 @@ if (-not (isInAdmin)) {
 
 # Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
 # Find-Module -Name NetworkingDSC -Repository PSGallery | Install-Module
-Write-Output 'Y' | winget configure --file "$($PSScriptRoot)\Environment.dsc.yaml"
-Write-Output "Y" | winget configure --file "$($PSScriptRoot)\Packages.dsc.yaml"
+winget configure --file "$($PSScriptRoot)\Environment.dsc.yaml" --accept-configuration-agreements
+winget configure --file "$($PSScriptRoot)\Packages.dsc.yaml" --accept-configuration-agreements
 
 ## Scoop ######################################################################
 
