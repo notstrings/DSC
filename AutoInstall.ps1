@@ -27,7 +27,19 @@ scoop install imagemagick
 scoop install ghostscript
 scoop install qpdf
 
-## RoboCopy ###################################################################
+## ファイル #######################################################################
 
 # robocopy "Source" "Destination" /MIR /FFT /DCOPY:DAT /R:3 /W:5 /NFL /NP /XJ 
 # robocopy "Source" "Destination" /MIR /FFT /DCOPY:DAT /R:3 /W:5 /NFL /NP /XJ 
+
+# 追加インストール
+# ## GoogleChrome
+# $SetupPath = "$($env:TEMP)\chrome_installer.exe"
+# Invoke-WebRequest "https://dl.google.com/chrome/install/latest/chrome_installer.exe" -OutFile $SetupPath
+# Start-Process -FilePath $SetupPath -Args "/silent /install" -Wait
+# Remove-Item $SetupPath
+# ## Zoom
+# $SetupPath = "$($env:TEMP)\zoom_installer.exe"
+# Invoke-WebRequest "https://zoom.us/client/latest/ZoomInstallerFull.exe?archType=x64" -OutFile $SetupPath
+# Start-Process -FilePath $SetupPath -Args "/silent /install" -Wait
+# Remove-Item $SetupPath
