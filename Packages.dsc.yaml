@@ -28,6 +28,76 @@ properties:
     #   settings:
     #     id: Microsoft.VisualStudioCode
     #     source: winget
+    # - resource: Microsoft.VSCode.Dsc/VSCodeExtension
+    #   dependsOn:
+    #     - installVSCode
+    #   id: installVSCodeExtensions1
+    #   directives:
+    #     description: Install language-pack ja
+    #     allowPrerelease: true
+    #   settings:
+    #     Name: ms-ceintl.vscode-language-pack-ja
+    #     Ensure: Present
+    # - resource: Microsoft.VSCode.Dsc/VSCodeExtension
+    #   dependsOn:
+    #     - installVSCode
+    #   id: installVSCodeExtensions2
+    #   directives:
+    #     description: Install batch runner
+    #     allowPrerelease: true
+    #   settings:
+    #     Name: nilssoderman.batch-runner
+    #     Ensure: Present
+    # - resource: Microsoft.VSCode.Dsc/VSCodeExtension
+    #   dependsOn:
+    #     - installVSCode
+    #   id: installVSCodeExtensions3
+    #   directives:
+    #     description: Install powershell runner
+    #     allowPrerelease: true
+    #   settings:
+    #     Name: ms-vscode.powershell
+    #     Ensure: Present
+    # - resource: Microsoft.VSCode.Dsc/VSCodeExtension
+    #   dependsOn:
+    #     - installVSCode
+    #   id: installVSCodeExtensions4
+    #   directives:
+    #     description: Install serial monitor
+    #     allowPrerelease: true
+    #   settings:
+    #     Name: ms-vscode.vscode-serial-monitor
+    #     Ensure: Present
+    # - resource: Microsoft.VSCode.Dsc/VSCodeExtension
+    #   dependsOn:
+    #     - installVSCode
+    #   id: installVSCodeExtensions5
+    #   directives:
+    #     description: Install hexeditor
+    #     allowPrerelease: true
+    #   settings:
+    #     Name: ms-vscode.hexeditor
+    #     Ensure: Present
+    # - resource: Microsoft.VSCode.Dsc/VSCodeExtension
+    #   dependsOn:
+    #     - installVSCode
+    #   id: installVSCodeExtensions6
+    #   directives:
+    #     description: Install keybindings
+    #     allowPrerelease: true
+    #   settings:
+    #     Name: ms-vscode.vs-keybindings
+    #     Ensure: Present
+    # - resource: Microsoft.VSCode.Dsc/VSCodeExtension
+    #   dependsOn:
+    #     - installVSCode
+    #   id: installVSCodeExtensions7
+    #   directives:
+    #     description: Install MDPE
+    #     allowPrerelease: true
+    #   settings:
+    #     Name: shd101wyy.markdown-preview-enhanced
+    #     Ensure: Present
 
     # 7-Zip ※管理権限が必要
     # - resource: Microsoft.WinGet.DSC/WinGetPackage
@@ -163,6 +233,16 @@ properties:
     #     id:     Inkscape.Inkscape
     #     source: winget
 
+    # NeeView ※管理権限が必要
+    # - resource: Microsoft.WinGet.DSC/WinGetPackage
+    #   id: installNeeView
+    #   directives:
+    #     description: Install NeeView
+    #     allowPrerelease: true
+    #   settings:
+    #     id:     neelabo.NeeView
+    #     source: winget
+
     # Screenpresso
     # - resource: Microsoft.WinGet.DSC/WinGetPackage
     #   id: installScreenpresso
@@ -231,13 +311,13 @@ properties:
     #     id: Mozilla.Thunderbird
     #     source: winget
 
-    # FFFTP ※管理権限が必要
+    # WinSCP ※管理権限が必要
     # - resource: Microsoft.WinGet.DSC/WinGetPackage
-    #   id: installFFFTP
+    #   id: installWinSCP
     #   directives:
-    #     description: Install FFFTP
+    #     description: Install WinSCP
     #   settings:
-    #     id: Sayuri.FFFTP
+    #     id: WinSCP.WinSCP
     #     source: winget
 
     # TeraTerm ※管理権限が必要
