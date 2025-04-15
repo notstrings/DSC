@@ -311,7 +311,7 @@ properties:
     #     id: Mozilla.Thunderbird
     #     source: winget
 
-    # WinSCP ※管理権限が必要
+    # WinSCP
     # - resource: Microsoft.WinGet.DSC/WinGetPackage
     #   id: installWinSCP
     #   directives:
