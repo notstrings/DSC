@@ -22,12 +22,16 @@ winget upgrade --all --scope user
 if (-not (Get-Command scoop -ErrorAction SilentlyContinue)) {
     Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
 }
+scoop update
+scoop update *
 scoop bucket add extras
+scoop install git
+scoop install aria2
 scoop install 7zip
+scoop install uutils-coreutils
 scoop install imagemagick
 scoop install ghostscript
 scoop install qpdf
-scoop update
 
 ## ファイル #######################################################################
 
